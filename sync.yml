@@ -1,0 +1,11 @@
+---
+
+- hosts: all
+
+  tasks:
+  - name: Syncing demo directory ...
+    synchronize:
+     src: /var/lib/awx/projects/ansible-examples
+     dest: /home/ec2-user
+     delete: yes
+     recursive: yes
