@@ -1,7 +1,7 @@
 ---
 
 - hosts: all
-  remote_user: root
+  remote_user: ec2-user
 
   tasks:
   - name: Syncing demo directory ...
