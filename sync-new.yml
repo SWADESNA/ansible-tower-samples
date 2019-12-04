@@ -6,7 +6,7 @@
   tasks:
   - name: Syncing demo directory ...
     synchronize:
-     src: /var/lib/awx/projects/ansible-examples
-     dest: /home/ec2-user
+     src: ./READMME.md
+     dest: ./ansible-tower-samples/sync.yml
      delete: yes
      recursive: yes
