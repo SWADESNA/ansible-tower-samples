@@ -7,6 +7,6 @@
   - name: Syncing demo directory ...
     synchronize:
      src: ./READMME.md
-     dest: ./ansible-tower-samples/sync.yml
+     dest: /home/ec2-user/
      delete: yes
      recursive: yes
