@@ -1,0 +1,9 @@
+- name: Hello World Sample
+  hosts: all
+  vars:
+    - nick_name:
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "Hello to the World !!!"
+        msg: "My name is {{nick_name}}"
