@@ -1,0 +1,18 @@
+---
+
+- name: Install Windows update module
+  gather_facts: false
+  hosts: all
+  tasks:
+
+  - name: Install window update with survey
+    win_updates:
+      #blacklist: "{{ blacklist }}"
+      category_names: "{{ categorieschoice }}"
+      log_path: "{{ logpath }}"
+      reboot: "{{ rebootchoice }}"
+      reboot_timeout: "{{ rebootimeoutchoice }}"
+      #server_selection: "{{ serverchoice }}"
+      state: "{{ statechoice }}"
+      #use_scheduled_task: "{{ usescheduledtaskchoice }}"
+      #whitelist: "{{ whitelist }}"
