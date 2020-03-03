@@ -1,0 +1,10 @@
+- name: Check Hashicorp Vault values
+  hosts: all
+  vars:
+    - key_data: "{{ lookup('hashi_vault', 'serect=secrets/kv')}}"
+
+  tasks:
+  - name: check host values for first_line
+    debug:
+      msg: " Print password: {{ machine_user }} First line is: {{ key_data }}"
+  
