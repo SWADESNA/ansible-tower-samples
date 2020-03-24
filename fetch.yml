@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks:
+  - name: Copy /tmp/output/itm/cinfoi_{{ ansible_hostname }}.out to Ansible Tower /tmp/sis
+    fetch:
+#     src: /tmp/output/itm/cinfoi_{{ ansible_hostname }}.out
+      src: /home/ec2-user/statetest.yml
+      dest: /tmp/
+      flat: yes
+      fail_on_missing: yes
+      validate_checksum: yes
