@@ -1,0 +1,6 @@
+- name: Hello World Sample
+  hosts: all
+  tasks:
+    - name: sleep to simulate latency
+      pause:
+        seconds: 120
