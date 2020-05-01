@@ -8,3 +8,11 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
+    - name: Ansible List variable Example
+      debug:
+        msg: "{{ continents [1] }}"
+    - name: Ansible array variables example
+      debug: 
+        msg: "{{ item }}"
+      with_items:
+        - "{{ continents }}"
