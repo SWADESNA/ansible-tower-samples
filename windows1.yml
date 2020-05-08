@@ -1,0 +1,8 @@
+---
+- name: Ensure user bob is present
+  win_user:
+    name: bob
+    password: bob
+    state: present
+    groups:
+      - Users
