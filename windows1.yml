@@ -2,6 +2,8 @@
 - name: Test windows
   hosts: all
   tasks:
+    - name: ping
+      win_ping:
     - name: Ensure user bob is present
       win_user:
         name: bob
