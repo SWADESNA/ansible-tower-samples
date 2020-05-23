@@ -2,7 +2,8 @@
 - hosts: all
   tasks:
     - name: Copy file and run the script
-      #become: yes
+      #become: yes    (this will not work, you need to set this on play/task)
+      become: yes
       #become_method: dzdo
       #become_user: root
       copy:
