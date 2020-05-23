@@ -4,7 +4,7 @@
     - name: Copy file and run the script
       #become: yes    (this will not work, you need to set this on play/task)
       become: yes
-      #become_method: dzdo
+      #become_method: dzdo/sudo on Ansible tower UI
       #become_user: root
       copy:
         src: /var/dzdo.txt
