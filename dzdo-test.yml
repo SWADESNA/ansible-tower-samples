@@ -2,7 +2,7 @@
 - hosts: all
   tasks:
     - name: Copy file and run the script
-      #become: yes
+      become: yes
       #become_method: dzdo
       #become_user: root
       copy:
