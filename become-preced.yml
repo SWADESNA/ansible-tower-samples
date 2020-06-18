@@ -2,6 +2,8 @@
   hosts: all
   tasks:
     - name: Debug whoami
+      become: yes
+   #   become_user: root
       shell: whoami
-      become: True
-      become_user: root
+    #  become: True
+      
