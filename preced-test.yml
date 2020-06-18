@@ -9,3 +9,5 @@
       debug:
         msg: "Hello to the World !!!"
         msg: "My name is {{nick_name}}"
+    - name: Test the user
+      shell: whoami
