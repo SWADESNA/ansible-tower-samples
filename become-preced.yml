@@ -1,0 +1,7 @@
+- name: Hello World Sample
+  hosts: all
+  tasks:
+    - name: Debug whoami
+      shell: whoami
+      become: True
+      become_user: root
