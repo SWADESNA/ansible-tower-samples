@@ -4,8 +4,8 @@
     #- nick_name:
   tasks:
     - name: Say my name to world
-      #vars:
-        #- nick_name: Mamuni
+      vars:
+        - nick_name: Mamuni
       debug:
         msg: "Hello to the World !!!"
         msg: "My name is {{nick_name}}"
