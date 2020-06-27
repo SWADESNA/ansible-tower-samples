@@ -3,8 +3,8 @@
   tasks:
     - name: Debug whoami
       become: yes
-      become_method: sudo
-   #   become_user: root
+    #  become_method: sudo
+      become_user: ec2-user
       shell: whoami
     #  become: True
       
