@@ -6,6 +6,6 @@
     #  become_method: sudo
       become_user: ec2-user
       shell: whoami
-      shell: pip3 list installed | wc -l
+      #shell: pip3 list installed | wc -l
     #  become: True
       
