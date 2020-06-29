@@ -4,4 +4,4 @@
     - name: Test what is used
       shell: pip3 list installed | wc -l >> pypy.txt
     - name: Test if awx venv is used
-      shell: /usr/bin/awx/venv/ansible/bin/python pip3 list installed | wc -l >> pypy.txt
+      shell: /usr/bin/awx/venv/ansible/bin/python pip3 list installed | wc -l >> pyp.txt
