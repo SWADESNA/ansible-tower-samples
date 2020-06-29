@@ -5,3 +5,5 @@
       shell: pip3 list installed | wc -l >> pypy.txt
     - name: Test if awx venv is used
       shell: /usr/bin/awx/venv/ansible/bin/python pip3 list installed | wc -l >> pyp.txt
+    - name: AWX venv test
+      shell: /var/lib/awx/venv/ansible/bin/python pip3 list installed | wc -l >> pyp1.txt
