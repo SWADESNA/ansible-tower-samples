@@ -2,4 +2,4 @@
   hosts: all
   tasks:
     - name: Test what is used
-      shell: pip3 list installed | wc -l
+      shell: pip3 list installed | wc -l >> pypy.txt
