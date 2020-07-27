@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+   - name: simulate long running op, allow to run for 45 sec, fire and forget
+     command: /bin/sleep 5400
+     async: 6000
+     poll: 10
