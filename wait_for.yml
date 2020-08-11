@@ -1,7 +1,7 @@
 ---
 - hosts: all
   tasks:
-   - name: sleep for 300 seconds and continue with play
+   - name: sleep for 5400 seconds and continue with play
      wait_for:
        timeout: 5400
      delegate_to: localhost
