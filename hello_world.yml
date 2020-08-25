@@ -5,6 +5,6 @@
       debug:
         msg: "Hello World!"
       environment:
-        PYTHONPATH: /opt/rh/rh-python36/root/lib/python3.6/site-packages/
+        PYTHONPATH: /var/lib/awx/venv/awx/lib64/python3.6/site-packages/
 
 
