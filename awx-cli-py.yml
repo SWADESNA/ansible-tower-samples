@@ -1,0 +1,6 @@
+- hosts: localhost
+  tasks:
+  - name: Test awx
+    command: "awx-manage --version"
+    environment:
+        PYTHONPATH: /var/lib/awx/venv/awx/lib64/python3.6/site-packages/
