@@ -3,4 +3,4 @@
   - name: Test awx
     command: "awx-manage --version"
     environment:
-      PYTHONPATH: "/opt/rh/rh-python36/root/lib/python3.6/site-packages/
+      PYTHONPATH: "/opt/rh/rh-python36/root/lib/python3.6/site-packages/"
