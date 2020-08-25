@@ -4,4 +4,6 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
+      environment:
+        PYTHONPATH: /var/lib/awx/venv/ansible/lib/python2.7/site-packages
 
