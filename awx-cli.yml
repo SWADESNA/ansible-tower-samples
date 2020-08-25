@@ -1,0 +1,4 @@
+- hosts: all
+  tasks:
+  - name: Test awx
+    command: "awx-manage --version"
