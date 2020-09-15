@@ -1,0 +1,8 @@
+ -hosts: all
+  gather_facts: false
+  vars:
+    num_messages: 
+  tasks:
+    - debug:
+        msg: "This is a debug message: {{ item }}"
+      with_sequence: 'count={{ num_messages }}'
