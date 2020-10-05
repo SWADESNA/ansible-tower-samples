@@ -1,0 +1,5 @@
+- name: Insert an Host
+  hosts: all
+  tasks:
+    - name: Test
+      shell: touch /tmp/test123
