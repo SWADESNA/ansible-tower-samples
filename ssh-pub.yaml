@@ -21,6 +21,8 @@
         content: "automate  ALL=(ALL)  NOPASSWD: ALL"
 
     - name: Deploy SSH Key
+      become=True
+      become_user=root
       authorized_key: user=automate
                       key="{{ lookup('file', '/home/automate/.ssh/id_rsa.pub') }}"
                       state=present
