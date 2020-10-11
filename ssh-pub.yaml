@@ -1,0 +1,34 @@
+---
+## Must be started as a root ##
+## ansible-playbook deploy-user-ssh.yml --ask-pass ##
+- hosts: all
+  vars:
+    - automate_password: auto
+      gather_facts: no
+      #remote_user: root
+
+  tasks:
+
+    - name: Add a new user named automate
+      user:
+        name=automate
+        password={{ automate_password }}
+        shell=/bin/bash
+
+    - name: Add automate user to the sudoers
+      copy:
+        dest: "/etc/sudoers.d/automate"
+        content: "automate  ALL=(ALL)  NOPASSWD: ALL"
+
+    - name: Deploy SSH Key
+      authorized_key: user=automate
+                      key="{{ lookup('file', '/home/automate/.ssh/id_rsa.pub') }}"
+                      state=present
+      notify:
+        - restart_ssh
+
+  handlers:
+    - name: restart_ssh
+      service:
+        name=sshd
+        state=restarted
