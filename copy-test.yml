@@ -1,0 +1,22 @@
+---
+- name: Test copy for RHEL7
+  hosts: all
+  tasks:
+  - name: Set facts for RHEL 7
+    set_fact:
+      secfixdb_file_src: files/secfixdb.RedHat7Server
+      secfixdb_file_dest: /tmp/secfixdb.RedHat7Server
+
+  - name: Upload lssecfix tool for RHEL7
+    copy:
+      src: files/lssecfixes
+      dest: /tmp/lssecfixes
+      force: true
+      mode: '0750'
+        
+   - name: Copy lssecfix db file for RHEL7
+     copy:
+       src: "{{ secfixdb_file_src }}"
+       dest: "{{ secfixdb_file_dest }}"
+       force: true
+
