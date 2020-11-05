@@ -4,19 +4,19 @@
   tasks:
   - name: Set facts for RHEL 7
     set_fact:
-      secfixdb_file_src: files/secfixdb.RedHat7Server
-      secfixdb_file_dest: /tmp/secfixdb.RedHat7Server
+      secfixdb_file_src: files/fixdb1.RH7
+      secfixdb_file_dest: /tmp/fixdb1.RH7
 
   - name: Upload lssecfix tool for RHEL7
     copy:
-      src: files/lssecfixes
-      dest: /tmp/lssecfixes
+      src: files/lsfix
+      dest: /tmp/lsfix
       force: true
       mode: '0750'
         
-   - name: Copy lssecfix db file for RHEL7
-     copy:
-       src: "{{ secfixdb_file_src }}"
-       dest: "{{ secfixdb_file_dest }}"
-       force: true
+  - name: Copy lssecfix db file for RHEL7
+    copy:
+      src: "{{ secfixdb_file_src }}"
+      dest: "{{ secfixdb_file_dest }}"
+      force: true
 
