@@ -11,7 +11,11 @@
       args:
         creates: "$HOME/test_file.txt"  
         
-    - name:  DISPLAY CWD
-      shell: echo $HOME   
+    - name: create a text file in /tmp 
+      shell: echo "Hello, World!" > /tmp/test_file.txt
+      args:
+        creates: "/tmp/test_file.txt"  
+        
+    
         
       
