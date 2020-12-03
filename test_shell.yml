@@ -1,0 +1,17 @@
+- name: TEST SHELL MODULE
+  hosts: all
+  tasks:
+    - name: DISPLAY USER
+      shell: whoami
+    - name:  DISPLAY CWD
+      shell: echo $HOME
+      
+    - name: create a text file in $HOME only if it doesn't already exist
+      shell: echo "Hello, World!" > $HOME/test_file.txt
+      args:
+        creates: "$HOME/test_file.txt"  
+        
+    - name:  DISPLAY CWD
+      shell: echo $HOME   
+        
+      
