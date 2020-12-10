@@ -2,11 +2,11 @@
 - name: Test Reboot
   hosts: all
   tasks:
-  - name: ping
-    ping
-  - name: Reboot
-    reboot:
-      reboot_timeout: 10
-      test_command: uptime 
-  - name: ping
-    ping    
+    - name: ping
+      ping:
+    - name: Reboot
+      reboot:
+        reboot_timeout: 10
+        test_command: uptime 
+    - name: ping
+      ping:    
