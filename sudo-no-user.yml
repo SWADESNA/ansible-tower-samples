@@ -1,0 +1,7 @@
+- name: Test sudo
+  hosts: all
+  #remote_user: ansible
+  tasks:
+    - name: No sudo user
+      become: yes
+      shell: cat /tmp/test.txt
