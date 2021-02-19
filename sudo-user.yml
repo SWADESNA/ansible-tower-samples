@@ -1,0 +1,7 @@
+- name: Test Sudo
+  hosts: all
+  tasks:
+    - name: Sudo user set
+      become: yes
+      become_user: root
+      shell: cat /tmp/test.txt
