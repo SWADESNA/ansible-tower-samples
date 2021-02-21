@@ -7,7 +7,7 @@
     - name: Ensure user bob is present
       win_user:
         name: Bob
-        password: Bobpassword
+        password: Bob@1234
         state: present
         groups:
           - Users
