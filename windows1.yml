@@ -6,8 +6,8 @@
       win_ping:
     - name: Ensure user bob is present
       win_user:
-        name: bob
-        password: B0bP4ssw0rd
+        name: Bob
+        password: Bobpassword
         state: present
         groups:
           - Users
